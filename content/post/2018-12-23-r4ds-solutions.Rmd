@@ -1,0 +1,92 @@
+---
+title: R4DS_solutions
+author: Lei Yan
+date: '2018-12-23'
+slug: r4ds-solutions
+categories:
+  - R
+tags:
+  - R4DS
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 5.6.7 Exercises
+```{r message=FALSE, warning=FALSE}
+library(tidyverse)
+library(nycflights13)
+```
+Creat `not_cancelled` for problems use.
+```{r}
+not_cancelled <- flights %>% filter(!is.na(dep_delay), !is.na(arr_delay))
+```
+### 1.
+I don't like this question, so I choose to ignore it.
+
+### 2.
+Come up with another approach that will give you the same output as `not_cancelled %>% count(dest)` and `not_cancelled %>% count(tailnum, wt = distance)` (without using count()).
+```{r}
+not_cancelled %>%
+  group_by(dest) %>%
+  summarise(n = n())
+```
+```{r}
+not_cancelled %>%
+  group_by(tailnum) %>%
+  summarise(n = sum(distance))
+```
+
+### 3.
+Our definition of cancelled flights `(is.na(dep_delay) | is.na(arr_delay) )` is slightly suboptimal. Why? Which is the most important column?
+
+Because there is no such flights which are cancelled at departure time but have non-`NA` arrival time. 
+We can verify this using the code below.
+```{r}
+flights %>%
+  filter(is.na(dep_delay), !is.na(arr_delay))
+```
+So, `dep_delay` is the most important column.
+
+### 4.
+Look at the number of cancelled flights per day. Is there a pattern? Is the proportion of cancelled flights related to the average delay?
+
+```{r}
+flights %>%
+  group_by(year, month, day) %>%
+  summarise(cancelled = sum(is.na(dep_delay)),
+            proportion = mean(is.na(dep_delay)),
+            aver_dep = mean(dep_delay, na.rm = T),
+            aver_arr = mean(arr_delay, na.rm = T)
+            ) %>%
+  ggplot(mapping = aes(x = proportion)) +
+  geom_point(mapping = aes(y = aver_dep), color = 'blue', alpha = 0.5) +
+  geom_point(mapping = aes(y = aver_arr), color = 'red', alpha = 0.5) + 
+  ylab('average delay(min)')
+```
+
+### 5.
+Which carrier has the worst delays? Challenge: can you disentangle the effects of bad airports vs. bad carriers? Why/why not? (Hint: think about `flights %>% group_by(carrier, dest) %>% summarise(n())`)
+
+Let's find out the carrier which has the worst delays.
+```{r message=FALSE}
+flights %>%
+  group_by(carrier) %>%
+  summarise(max_dep = max(dep_delay, na.rm = T),
+            max_arr = max(arr_delay, na.rm = T)) %>%
+  arrange(desc(max_dep, max_arr)) %>% 
+  top_n(1)
+  
+```
+
+Use the hint:
+```{r}
+flights %>% 
+  group_by(carrier, dest) %>%
+  summarise(n())
+```
+
+### 6.
+What does the `sort` argument to `count()` do. When might you use it?
+
+`sort` if `TRUE` will sort output in descending order of `n`

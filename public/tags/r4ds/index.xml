@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R4DS on Lei Yan&#39;s Cool Website</title>
+    <link>/tags/r4ds/</link>
+    <description>Recent content in R4DS on Lei Yan&#39;s Cool Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/r4ds/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>R4DS_solutions</title>
+      <link>/post/2018/12/23/r4ds-solutions/</link>
+      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/23/r4ds-solutions/</guid>
+      <description>5.6.7 Exerciseslibrary(tidyverse)library(nycflights13)Creat not_cancelled for problems use.
+not_cancelled &amp;lt;- flights %&amp;gt;% filter(!is.na(dep_delay), !is.na(arr_delay))1.I don’t like this question, so I choose to ignore it.
+2.Come up with another approach that will give you the same output as not_cancelled %&amp;gt;% count(dest) and not_cancelled %&amp;gt;% count(tailnum, wt = distance) (without using count()).
+not_cancelled %&amp;gt;%group_by(dest) %&amp;gt;%summarise(n = n())## # A tibble: 104 x 2## dest n## &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;## 1 ABQ 254## 2 ACK 264## 3 ALB 418## 4 ANC 8## 5 ATL 16837## 6 AUS 2411## 7 AVL 261## 8 BDL 412## 9 BGR 358## 10 BHM 269## # .</description>
+    </item>
+    
+  </channel>
+</rss>

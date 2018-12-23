@@ -1,0 +1,131 @@
+---
+title: R4DS_solutions
+author: Lei Yan
+date: '2018-12-23'
+slug: r4ds-solutions
+categories:
+  - R
+tags:
+  - R4DS
+---
+
+
+
+<div id="exercises" class="section level2">
+<h2>5.6.7 Exercises</h2>
+<pre class="r"><code>library(tidyverse)
+library(nycflights13)</code></pre>
+<p>Creat <code>not_cancelled</code> for problems use.</p>
+<pre class="r"><code>not_cancelled &lt;- flights %&gt;% filter(!is.na(dep_delay), !is.na(arr_delay))</code></pre>
+<div id="section" class="section level3">
+<h3>1.</h3>
+<p>I don’t like this question, so I choose to ignore it.</p>
+</div>
+<div id="section-1" class="section level3">
+<h3>2.</h3>
+<p>Come up with another approach that will give you the same output as <code>not_cancelled %&gt;% count(dest)</code> and <code>not_cancelled %&gt;% count(tailnum, wt = distance)</code> (without using count()).</p>
+<pre class="r"><code>not_cancelled %&gt;%
+  group_by(dest) %&gt;%
+  summarise(n = n())</code></pre>
+<pre><code>## # A tibble: 104 x 2
+##    dest      n
+##    &lt;chr&gt; &lt;int&gt;
+##  1 ABQ     254
+##  2 ACK     264
+##  3 ALB     418
+##  4 ANC       8
+##  5 ATL   16837
+##  6 AUS    2411
+##  7 AVL     261
+##  8 BDL     412
+##  9 BGR     358
+## 10 BHM     269
+## # ... with 94 more rows</code></pre>
+<pre class="r"><code>not_cancelled %&gt;%
+  group_by(tailnum) %&gt;%
+  summarise(n = sum(distance))</code></pre>
+<pre><code>## # A tibble: 4,037 x 2
+##    tailnum      n
+##    &lt;chr&gt;    &lt;dbl&gt;
+##  1 D942DN    3418
+##  2 N0EGMQ  239143
+##  3 N10156  109664
+##  4 N102UW   25722
+##  5 N103US   24619
+##  6 N104UW   24616
+##  7 N10575  139903
+##  8 N105UW   23618
+##  9 N107US   21677
+## 10 N108UW   32070
+## # ... with 4,027 more rows</code></pre>
+</div>
+<div id="section-2" class="section level3">
+<h3>3.</h3>
+<p>Our definition of cancelled flights <code>(is.na(dep_delay) | is.na(arr_delay) )</code> is slightly suboptimal. Why? Which is the most important column?</p>
+<p>Because there is no such flights which are cancelled at departure time but have non-<code>NA</code> arrival time. We can verify this using the code below.</p>
+<pre class="r"><code>flights %&gt;%
+  filter(is.na(dep_delay), !is.na(arr_delay))</code></pre>
+<pre><code>## # A tibble: 0 x 19
+## # ... with 19 variables: year &lt;int&gt;, month &lt;int&gt;, day &lt;int&gt;,
+## #   dep_time &lt;int&gt;, sched_dep_time &lt;int&gt;, dep_delay &lt;dbl&gt;, arr_time &lt;int&gt;,
+## #   sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;, flight &lt;int&gt;,
+## #   tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
+## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p>So, <code>dep_delay</code> is the most important column.</p>
+</div>
+<div id="section-3" class="section level3">
+<h3>4.</h3>
+<p>Look at the number of cancelled flights per day. Is there a pattern? Is the proportion of cancelled flights related to the average delay?</p>
+<pre class="r"><code>flights %&gt;%
+  group_by(year, month, day) %&gt;%
+  summarise(cancelled = sum(is.na(dep_delay)),
+            proportion = mean(is.na(dep_delay)),
+            aver_dep = mean(dep_delay, na.rm = T),
+            aver_arr = mean(arr_delay, na.rm = T)
+            ) %&gt;%
+  ggplot(mapping = aes(x = proportion)) +
+  geom_point(mapping = aes(y = aver_dep), color = &#39;blue&#39;, alpha = 0.5) +
+  geom_point(mapping = aes(y = aver_arr), color = &#39;red&#39;, alpha = 0.5) + 
+  ylab(&#39;average delay(min)&#39;)</code></pre>
+<p><img src="/post/2018-12-23-r4ds-solutions_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+<div id="section-4" class="section level3">
+<h3>5.</h3>
+<p>Which carrier has the worst delays? Challenge: can you disentangle the effects of bad airports vs. bad carriers? Why/why not? (Hint: think about <code>flights %&gt;% group_by(carrier, dest) %&gt;% summarise(n())</code>)</p>
+<p>Let’s find out the carrier which has the worst delays.</p>
+<pre class="r"><code>flights %&gt;%
+  group_by(carrier) %&gt;%
+  summarise(max_dep = max(dep_delay, na.rm = T),
+            max_arr = max(arr_delay, na.rm = T)) %&gt;%
+  arrange(desc(max_dep, max_arr)) %&gt;% 
+  top_n(1)</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   carrier max_dep max_arr
+##   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 HA         1301    1272</code></pre>
+<p>Use the hint:</p>
+<pre class="r"><code>flights %&gt;% 
+  group_by(carrier, dest) %&gt;%
+  summarise(n())</code></pre>
+<pre><code>## # A tibble: 314 x 3
+## # Groups:   carrier [?]
+##    carrier dest  `n()`
+##    &lt;chr&gt;   &lt;chr&gt; &lt;int&gt;
+##  1 9E      ATL      59
+##  2 9E      AUS       2
+##  3 9E      AVL      10
+##  4 9E      BGR       1
+##  5 9E      BNA     474
+##  6 9E      BOS     914
+##  7 9E      BTV       2
+##  8 9E      BUF     833
+##  9 9E      BWI     856
+## 10 9E      CAE       3
+## # ... with 304 more rows</code></pre>
+</div>
+<div id="section-5" class="section level3">
+<h3>6.</h3>
+<p>What does the <code>sort</code> argument to <code>count()</code> do. When might you use it?</p>
+<p><code>sort</code> if <code>TRUE</code> will sort output in descending order of <code>n</code></p>
+</div>
+</div>
