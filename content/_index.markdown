@@ -6,7 +6,7 @@ title: Home
 
 # Lei Yan
 
-## _I web, therefore I am ~~a spierman~~._
+## _I web, therefore I am ~~a spiderman~~._
 
 ### Welcome to my website!
 ### 欢迎浏览我的网站！  
