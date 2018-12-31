@@ -19,5 +19,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Summary</title>
+      <link>/categories/summary/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/summary/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

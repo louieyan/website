@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Lei Yan&#39;s Cool Website</title>
+    <link>/tags/books/</link>
+    <description>Recent content in Books on Lei Yan&#39;s Cool Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Books I read in 2018</title>
+      <link>/post/2018/12/31/books-i-read-in-2018/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/31/books-i-read-in-2018/</guid>
+      <description>这里我列一下我今年读过的和正在读书，希望你能找到对你口味的~ 《白鹿原》 陈老说他在这本书中很少用用到肖像描写，更多的是通过心理描写来让大家记住</description>
+    </item>
+    
+  </channel>
+</rss>

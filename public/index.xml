@@ -6,10 +6,28 @@
     <description>Recent content in Home on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 23 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Books I read in 2018</title>
+      <link>/post/2018/12/31/books-i-read-in-2018/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/31/books-i-read-in-2018/</guid>
+      <description>这里我列一下我今年读过的和正在读书，希望你能找到对你口味的~ 《白鹿原》 陈老说他在这本书中很少用用到肖像描写，更多的是通过心理描写来让大家记住</description>
+    </item>
+    
+    <item>
+      <title>MY 2018</title>
+      <link>/post/2018/12/31/my-2018/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018/12/31/my-2018/</guid>
+      <description>2018就要过去了，我想回顾一下它。 一月份： 考完试后，我并没有回家，而是留在了学校准备和胡总，嘉源参加美赛。当时大家一个比一个有信心，我呢是</description>
+    </item>
     
     <item>
       <title>R4DS_solutions</title>
@@ -24,12 +42,12 @@ not_cancelled %&amp;gt;%group_by(dest) %&amp;gt;%summarise(n = n())## # A tib
     </item>
     
     <item>
-      <title>About Lei Yan</title>
+      <title>About This Website</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/about/</guid>
-      <description>I will write some information about this website and why I built this website.</description>
+      <description>This website is created by blogdown and hugo. I used the XMIN template designed by Yihui Xie. Specificly, I followed the online book: blogdown: Creating Websites with R Markdown, but in practice, I encountered many problems when I read it. So I will write a post about how I solve those problems and finally set up this website.</description>
     </item>
     
   </channel>
