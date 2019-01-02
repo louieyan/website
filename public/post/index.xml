@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Machine Learning Resources</title>
+      <link>/post/2019/01/02/machine-learning-resources/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/02/machine-learning-resources/</guid>
+      <description>I will continue adding new good resources to this post. But don’t get lost in them. Choose one and keep learning. After you finished one course, then choose another one.
+Hope this can be helpful to you!
+Roadmap of DL and MLFor a newecomer to deep learning and machine learning area, facing some much courses and resources, the first question is how to choose right books and courses to begin this trip.</description>
+    </item>
     
     <item>
       <title>Books I read in 2018</title>

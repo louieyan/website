@@ -1,0 +1,68 @@
+---
+title: Machine Learning Resources
+author: Lei Yan
+date: '2019-01-02'
+slug: machine-learning-resources
+categories:
+  - Machine Learning
+tags:
+  - ML
+  - NLP
+---
+I will continue adding new good resources to this post. But don't get lost in them. Choose one and keep learning. After you finished one course, then choose another one.  
+Hope this can be helpful to you!  
+
+## [Roadmap of DL and ML](https://github.com/L1aoXingyu/Roadmap-of-DL-and-ML)  
+For a newecomer to deep learning and machine learning area, facing some much courses and resources, the first question is how to choose right books and courses to begin this trip.The roadmap includes some highly recommended courses, books and papers which can help you get into DL and ML area quickly. Maybe some materials are quite difficult, but really worth reading and studying.  
+
+## [Machine Translation Reading List](https://github.com/THUNLP-MT/MT-Reading-List)  
+A machine translation reading list maintained by the Tsinghua Natural Language Processing Group.  
+
+## [TensorFlow Course](https://github.com/osforscience/TensorFlow-Course)  
+This repository aims to provide simple and read-to-use tutorials for TensorFlow. Each tutorial includes `source code` and most of them are associated with a `documentation`.   
+
+## [Summer School on Deep Learning and Bayesian Methods](http://deepbayes.ru/)  
+In this course, they discuss how Bayesian Methods can be combined with Deep Learning and lead to better results in machine learning applications.    
+The most important thing is this course provides full videos, slides and assignments.    
+
+## [Machine Learning for OpenCV](https://github.com/mbeyeler/opencv-machine-learning)  
+It is a Jupyter notebook version of [this book](https://www.amazon.com/Machine-Learning-OpenCV-Michael-Beyeler/dp/1783980281)  
+It might be a good book for the people who want to learning CV but with little background.  
+
+## [Kaggle Past Solution](https://github.com/EliotAndres/kaggle-past-solutions)  
+A searchable and sortable compilation of [Kaggle](https://www.kaggle.com/) past solutions. [Website](http://ndres.me/kaggle-past-solutions/)  
+
+## [Hands-On Machine Learning](https://github.com/ageron/handson-ml)  
+This project aims at teaching you the fundamentals of Machine Learning in python. It contains the example code and solutions to the exercises in [this book](http://shop.oreilly.com/product/0636920052289.do).  
+**You can download a pdf version of this book at [here](https://pan.baidu.com/s/1fb_jjSXZG9Ixe4hgmoDEug).**  
+
+## [Code for PRML](https://github.com/PRML/PRMLT)  
+This Matlab package implements machine learning algorithms described in the great textbook: Pattern Recognition and Machine Learning by C. Bishop ([PRML](https://www.microsoft.com/en-us/research/people/cmbishop/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Fcmbishop%2Fprml%2F)).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
