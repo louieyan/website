@@ -17,5 +17,12 @@ I hope this site will help you one day.
 在[Categories](https://leiyan.net.cn/categories/)中，您可以分类查看以往的post。在[Tags](https://leiyan.net.cn/tags/)中，您可以按照关键词来浏览。在[About](https://leiyan.net.cn/about/)中，您可以浏览到关于本站的一些信息。目前我还没有研究好该如何使用Substribe...  
 希望有部分内容能够帮助到您！
 
-<div align="right"><a href="leiyan.net.cn"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3228889&c=9686980" alt="AmazingCounters.com"></a></div>
+
+<!-- Start of WebFreeCounter Code -->
+<div align="right">
+<a href="https://www.webfreecounter.com/" target="_blank"><img src="https://www.webfreecounter.com/hit.php?id=zmmaoad&nd=6&style=1" border="0" alt="free counter"></a>
+</div>
+<!-- End of WebFreeCounter Code -->
+
+
 
