@@ -6,10 +6,19 @@
     <description>Recent content in Home on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Network analysis of Game of Thrones (Part 1)</title>
+      <link>/post/2019/01/04/a-network-analysis-of-game-of-thrones/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/04/a-network-analysis-of-game-of-thrones/</guid>
+      <description>Which one is the most important character in Game of Thrones? How the importance of characters evolves over the books? How to define the importance of characters? Is there a strong correlation between different measures of importance? After you read this post, you can easily answer the above questions! This actually is a DataCamp Project. But I modified some code to draw three more beautiful pictures and added some comments.</description>
+    </item>
     
     <item>
       <title>Machine Learning Resources</title>

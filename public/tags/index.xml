@@ -39,11 +39,29 @@
     </item>
     
     <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>R4DS</title>
       <link>/tags/r4ds/</link>
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/r4ds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networkx</title>
+      <link>/tags/networkx/</link>
+      <pubDate>Fri, 04 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/networkx/</guid>
       <description></description>
     </item>
     
