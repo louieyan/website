@@ -1,0 +1,11 @@
+---
+title: R Functional Programming
+author: Lei Yan
+date: '2019-01-16'
+slug: r-functional-programming
+categories:
+  - R
+tags:
+  - Functional Programming
+---
+(需要填坑。。。)

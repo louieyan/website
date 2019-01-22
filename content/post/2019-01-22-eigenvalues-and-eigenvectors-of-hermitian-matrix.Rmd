@@ -1,0 +1,69 @@
+---
+title: Eigenvalues and Eigenvectors of Hermitian Matrix
+author: Lei Yan
+date: '2019-01-22'
+slug: eigenvalues-and-eigenvectors-of-hermitian-matrix
+categories:
+  - Linear Algebra
+tags:
+  - Eigenvalue
+  - Hermitian Matrix
+---
+这两天在看Multivariate Gaussian Distribution，里面用到了不少关于实对称矩阵的特征值和特征向量的知识，不少我都忘了，在此总结一下以供翻阅参考。  
+为了得到最终的结果，首先介绍了特征值分解，然后是几何重复度和代数重复度，接下来是相似变换，最后是Schur Factorization。  
+
+### Hermitian Matrix: $A$ is a hermitian matrix if $\bar{A}_{ij} = A_{ji}$.    
+上面的定义实际上就是实对称的矩阵的复数版本。我们最终得到的结果是适用于hermitian matrix的，而不仅仅是实对称矩阵。   
+
+### 特征值分解(Eigenvalue Decomposition)
+设$A$为一$n\times n$的矩阵，若它有$n$个相互独立的特征向量，则有:
+$$ A = X\Lambda X^{-1} \tag{1}$$
+其中$X$是特征向量矩阵，它的每一列都是$A$的特征向量。$\Lambda$是特征值矩阵，它是对角矩阵，特征值排列在对角线上。   
+<div align = center>[![kF0zl9.md.jpg](https://s2.ax1x.com/2019/01/22/kF0zl9.md.jpg)](https://imgchr.com/i/kF0zl9)</div>  
+
+### 几何重复度(Geometric Multiplicity)
+设$\lambda$是矩阵$A$的一个特征值，则由对应于$\lambda$的特征向量和零向量可以组成$\mathbb{C}^m$的一个子空间，记为$E_{\lambda}$。而且$E_{\lambda}$是$A$的一个*不变子空间*，即：$AE_{\lambda} \subseteq E_{\lambda}$。  
+$E_{\lambda}$的维度等于对应于同一特征值的相互独立的特征向量的最大个数，这个数($GM(\lambda)$)就称为$\lambda$的几何重复度。从另一个角度来描述就是：$GM(\lambda)$等于$A - \lambda I$的零空间(nullspace)的维度。  
+
+### 代数重复度(Algebraic Multiplicity)  
+矩阵$A$的特征多项式为：
+$$p_A(z) = \text{det}(zI - A) \tag{2}$$
+根据代数基本定理可得：
+$$ p_(A)(z) = (z - \lambda_1)(z - \lambda_2)\cdots(z - \lambda_n) $$
+其中$\lambda_i \in \mathbb{C}$，而且$\lambda_i$可以出现不止一次，它的代数重复度等于它出现的次数。  
+
+### 相似变换 
+若$X \in \mathbb{C}^{n \times n}$是非奇异的，则称变换
+$A \to X^{-1}AX$为*相似变换*。如果两个矩阵可以通过相似变换互相得到，则称这两个矩阵是*相似的*。上面提到的特征值分解就可以看作相似变换。关于相似变换有下面的定理：  
+**定理：** *如果*$X$*是非奇异矩阵，则*$A$*和*$X^{-1}AX$*有相同的特征多项式，特征值，几何和代数重复度。*    
+*证明：*首先有：
+$$
+\begin{aligned}
+p_{X^{-1}AX}(z) &= \text{det}(zI - X^{-1}AX) \\
+&= \text{det}(X^{-1}(zI - A)X) \\
+&= \text{det}(X^{-1})\text{det}(zI - A)\text{det}(X) \\
+&= \text{det}(zI - A) \\
+&= p_A(z)
+\end{aligned}
+$$
+这就证明了相似矩阵有相同的特征多项式，特征值和代数重复度。下面证有相同的几何重复度。  
+任取一特征值$\lambda$，其对应的特征子空间为$E_{\lambda}$，则$\forall y \in E_{\lambda}$，有：
+$$
+\begin{aligned}
+X^{-1}AX(X^{-1}y) &= X^{-1}Ay \qquad (Ay = \lambda y) \\
+&= \lambda (X^{-1}y)
+\end{aligned}
+$$
+可知$X^{-1}E_{\lambda}$是$X^{-1}AX$的特征子空间，反之亦然。  
+
+
+
+
+
+
+
+
+
+
+
+
