@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2019/01/22/eigenvalues-and-eigenvectors-of-hermitian-matrix/</loc>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2019/01/16/r-functional-programming/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2019/01/06/writing-in-sciences-exercises-for-module-1-6/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2019/01/04/a-network-analysis-of-game-of-thrones/</loc>
     <lastmod>2019-01-04T00:00:00+00:00</lastmod>
   </url>
@@ -43,8 +58,32 @@
   </url>
   
   <url>
+    <loc>/tags/eigenvalue/</loc>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/functional-programming/</loc>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/hermitian-matrix/</loc>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/</loc>
-    <lastmod>2019-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/linear-algebra/</loc>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -67,7 +106,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-01-04T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-22T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -85,7 +124,7 @@
   
   <url>
     <loc>/categories/r/</loc>
-    <lastmod>2018-12-23T00:00:00+00:00</lastmod>
+    <lastmod>2019-01-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -104,6 +143,18 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/writing/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/writing-in-the-sciences/</loc>
+    <lastmod>2019-01-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

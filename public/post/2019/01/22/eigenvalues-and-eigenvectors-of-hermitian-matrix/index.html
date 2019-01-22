@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eigenvalues and Eigenvectors of Hermitian Matrix | Lei Yan&#39;s Cool Website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+     
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Eigenvalues and Eigenvectors of Hermitian Matrix</span></h1>
+<h2 class="author">Lei Yan</h2>
+<h2 class="date">2019/01/22</h2>
+</div>
+
+<main>
+
+
+
+<p>这两天在看Multivariate Gaussian Distribution，里面用到了不少关于实对称矩阵的特征值和特征向量的知识，不少我都忘了，在此总结一下以供翻阅参考。<br />
+为了得到最终的结果，首先介绍了特征值分解，然后是几何重复度和代数重复度，接下来是相似变换，最后是Schur Factorization。</p>
+<div id="hermitian-matrix-a-is-a-hermitian-matrix-if-bara_ij-a_ji." class="section level3">
+<h3>Hermitian Matrix: <span class="math inline">\(A\)</span> is a hermitian matrix if <span class="math inline">\(\bar{A}_{ij} = A_{ji}\)</span>.</h3>
+<p>上面的定义实际上就是实对称的矩阵的复数版本。我们最终得到的结果是适用于hermitian matrix的，而不仅仅是实对称矩阵。</p>
+</div>
+<div id="eigenvalue-decomposition" class="section level3">
+<h3>特征值分解(Eigenvalue Decomposition)</h3>
+设<span class="math inline">\(A\)</span>为一<span class="math inline">\(n\times n\)</span>的矩阵，若它有<span class="math inline">\(n\)</span>个相互独立的特征向量，则有: <span class="math display">\[ A = X\Lambda X^{-1} \tag{1}\]</span> 其中<span class="math inline">\(X\)</span>是特征向量矩阵，它的每一列都是<span class="math inline">\(A\)</span>的特征向量。<span class="math inline">\(\Lambda\)</span>是特征值矩阵，它是对角矩阵，特征值排列在对角线上。<br />
+
+<div align="center">
+<a href="https://imgchr.com/i/kF0zl9"><img src="https://s2.ax1x.com/2019/01/22/kF0zl9.md.jpg" alt="kF0zl9.md.jpg" /></a>
+</div>
+</div>
+<div id="geometric-multiplicity" class="section level3">
+<h3>几何重复度(Geometric Multiplicity)</h3>
+<p>设<span class="math inline">\(\lambda\)</span>是矩阵<span class="math inline">\(A\)</span>的一个特征值，则由对应于<span class="math inline">\(\lambda\)</span>的特征向量和零向量可以组成<span class="math inline">\(\mathbb{C}^m\)</span>的一个子空间，记为<span class="math inline">\(E_{\lambda}\)</span>。而且<span class="math inline">\(E_{\lambda}\)</span>是<span class="math inline">\(A\)</span>的一个<em>不变子空间</em>，即：<span class="math inline">\(AE_{\lambda} \subseteq E_{\lambda}\)</span>。<br />
+<span class="math inline">\(E_{\lambda}\)</span>的维度等于对应于同一特征值的相互独立的特征向量的最大个数，这个数(<span class="math inline">\(GM(\lambda)\)</span>)就称为<span class="math inline">\(\lambda\)</span>的几何重复度。从另一个角度来描述就是：<span class="math inline">\(GM(\lambda)\)</span>等于<span class="math inline">\(A - \lambda I\)</span>的零空间(nullspace)的维度。</p>
+</div>
+<div id="algebraic-multiplicity" class="section level3">
+<h3>代数重复度(Algebraic Multiplicity)</h3>
+<p>矩阵<span class="math inline">\(A\)</span>的特征多项式为： <span class="math display">\[p_A(z) = \text{det}(zI - A) \tag{2}\]</span> 根据代数基本定理可得： <span class="math display">\[ p_(A)(z) = (z - \lambda_1)(z - \lambda_2)\cdots(z - \lambda_n) \]</span> 其中<span class="math inline">\(\lambda_i \in \mathbb{C}\)</span>，而且<span class="math inline">\(\lambda_i\)</span>可以出现不止一次，它的代数重复度等于它出现的次数。</p>
+</div>
+<div class="section level3">
+<h3>相似变换</h3>
+<p>若<span class="math inline">\(X \in \mathbb{C}^{n \times n}\)</span>是非奇异的，则称变换 <span class="math inline">\(A \to X^{-1}AX\)</span>为<em>相似变换</em>。如果两个矩阵可以通过相似变换互相得到，则称这两个矩阵是<em>相似的</em>。上面提到的特征值分解就可以看作相似变换。关于相似变换有下面的定理：<br />
+<strong>定理：</strong> <em>如果</em><span class="math inline">\(X\)</span><em>是非奇异矩阵，则</em><span class="math inline">\(A\)</span><em>和</em><span class="math inline">\(X^{-1}AX\)</span><em>有相同的特征多项式，特征值，几何和代数重复度。</em><br />
+<em>证明：</em>首先有： <span class="math display">\[
+\begin{aligned}
+p_{X^{-1}AX}(z) &amp;= \text{det}(zI - X^{-1}AX) \\
+&amp;= \text{det}(X^{-1}(zI - A)X) \\
+&amp;= \text{det}(X^{-1})\text{det}(zI - A)\text{det}(X) \\
+&amp;= \text{det}(zI - A) \\
+&amp;= p_A(z)
+\end{aligned}
+\]</span> 这就证明了相似矩阵有相同的特征多项式，特征值和代数重复度。下面证有相同的几何重复度。<br />
+任取一特征值<span class="math inline">\(\lambda\)</span>，其对应的特征子空间为<span class="math inline">\(E_{\lambda}\)</span>，则<span class="math inline">\(\forall y \in E_{\lambda}\)</span>，有： <span class="math display">\[
+\begin{aligned}
+X^{-1}AX(X^{-1}y) &amp;= X^{-1}Ay \qquad (Ay = \lambda y) \\
+&amp;= \lambda (X^{-1}y)
+\end{aligned}
+\]</span> 可知<span class="math inline">\(X^{-1}E_{\lambda}\)</span>是<span class="math inline">\(X^{-1}AX\)</span>的特征子空间，反之亦然。</p>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; Lei Yan 2018 &ndash; 2019 | <a href="https://github.com/louieyan">Github</a> | <a href="https://www.zhihu.com/people/yan-lei-8-9/">Zhihu</a> | <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1216360090&amp;site=qq&amp;menu=yes">QQ</a>
+  
+  </footer>
+  </body>
+</html>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eigenvalue on Lei Yan&#39;s Cool Website</title>
+    <link>/tags/eigenvalue/</link>
+    <description>Recent content in Eigenvalue on Lei Yan&#39;s Cool Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/eigenvalue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Eigenvalues and Eigenvectors of Hermitian Matrix</title>
+      <link>/post/2019/01/22/eigenvalues-and-eigenvectors-of-hermitian-matrix/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/22/eigenvalues-and-eigenvectors-of-hermitian-matrix/</guid>
+      <description>这两天在看Multivariate Gaussian Distribution，里面用到了不少关于实对称矩阵的特征值和特征向量的知识，不少我都忘了，在此总结一</description>
+    </item>
+    
+  </channel>
+</rss>

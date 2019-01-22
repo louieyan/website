@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>Linear Algebra</title>
+      <link>/categories/linear-algebra/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/linear-algebra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Machine Learning</title>
       <link>/categories/machine-learning/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
@@ -31,7 +40,7 @@
     <item>
       <title>R</title>
       <link>/categories/r/</link>
-      <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/r/</guid>
       <description></description>
@@ -43,6 +52,15 @@
       <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/categories/summary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>/categories/writing/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/writing/</guid>
       <description></description>
     </item>
     

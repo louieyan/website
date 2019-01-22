@@ -21,6 +21,33 @@
     </item>
     
     <item>
+      <title>Eigenvalue</title>
+      <link>/tags/eigenvalue/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/eigenvalue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Functional Programming</title>
+      <link>/tags/functional-programming/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hermitian Matrix</title>
+      <link>/tags/hermitian-matrix/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/hermitian-matrix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>ML</title>
       <link>/tags/ml/</link>
       <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
@@ -53,6 +80,15 @@
       <pubDate>Sun, 23 Dec 2018 00:00:00 +0000</pubDate>
       
       <guid>/tags/r4ds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing in the Sciences</title>
+      <link>/tags/writing-in-the-sciences/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/writing-in-the-sciences/</guid>
       <description></description>
     </item>
     

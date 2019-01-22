@@ -6,10 +6,40 @@
     <description>Recent content in Home on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Eigenvalues and Eigenvectors of Hermitian Matrix</title>
+      <link>/post/2019/01/22/eigenvalues-and-eigenvectors-of-hermitian-matrix/</link>
+      <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/22/eigenvalues-and-eigenvectors-of-hermitian-matrix/</guid>
+      <description>这两天在看Multivariate Gaussian Distribution，里面用到了不少关于实对称矩阵的特征值和特征向量的知识，不少我都忘了，在此总结一</description>
+    </item>
+    
+    <item>
+      <title>R Functional Programming</title>
+      <link>/post/2019/01/16/r-functional-programming/</link>
+      <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/16/r-functional-programming/</guid>
+      <description>(需要填坑。。。)</description>
+    </item>
+    
+    <item>
+      <title>Writing in Sciences: Exercises for Module 1.6</title>
+      <link>/post/2019/01/06/writing-in-sciences-exercises-for-module-1-6/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/06/writing-in-sciences-exercises-for-module-1-6/</guid>
+      <description>1. Anti-inflammatory drugs may be protective for the occurrence of Alzheimer’s Disease.  Anti-inflammatory drugs may protect against Alzheimer&amp;rsquo;s Diease.
+ Use verb protect instead of adj. protective. And the occurrence of is useless, so delete it.
+2. Clinical seizures have been estimated to occur in 0.5% to 2.3% of the neonatal population.  Clinical seizures occur in 0.5% to 2.3% of the newborns.
+ have been estimated to is useless here and neonatal population just mean newborns.</description>
+    </item>
     
     <item>
       <title>A Network analysis of Game of Thrones (Part 1)</title>

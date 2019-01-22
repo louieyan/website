@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writing in the Sciences on Lei Yan&#39;s Cool Website</title>
+    <link>/tags/writing-in-the-sciences/</link>
+    <description>Recent content in Writing in the Sciences on Lei Yan&#39;s Cool Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 06 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/writing-in-the-sciences/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Writing in Sciences: Exercises for Module 1.6</title>
+      <link>/post/2019/01/06/writing-in-sciences-exercises-for-module-1-6/</link>
+      <pubDate>Sun, 06 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/01/06/writing-in-sciences-exercises-for-module-1-6/</guid>
+      <description>1. Anti-inflammatory drugs may be protective for the occurrence of Alzheimer’s Disease.  Anti-inflammatory drugs may protect against Alzheimer&amp;rsquo;s Diease.
+ Use verb protect instead of adj. protective. And the occurrence of is useless, so delete it.
+2. Clinical seizures have been estimated to occur in 0.5% to 2.3% of the neonatal population.  Clinical seizures occur in 0.5% to 2.3% of the newborns.
+ have been estimated to is useless here and neonatal population just mean newborns.</description>
+    </item>
+    
+  </channel>
+</rss>
