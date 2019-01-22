@@ -39,8 +39,8 @@
 
 <p>这两天在看Multivariate Gaussian Distribution，里面用到了不少关于实对称矩阵的特征值和特征向量的知识，不少我都忘了，在此总结一下以供翻阅参考。<br />
 为了得到最终的结果，首先介绍了特征值分解，然后是几何重复度和代数重复度，接下来是相似变换，最后是Schur Factorization。</p>
-<div id="hermitian-matrix-a-is-a-hermitian-matrix-if-bara_ij-a_ji." class="section level3">
-<h3>Hermitian Matrix: <span class="math inline">\(A\)</span> is a hermitian matrix if <span class="math inline">\(\bar{A}_{ij} = A_{ji}\)</span>.</h3>
+<div id="hermitian-matrix-a-is-a-hermitian-matrix-if-bara_ij-a_ji-or-a-a." class="section level3">
+<h3>Hermitian Matrix: <span class="math inline">\(A\)</span> is a hermitian matrix if <span class="math inline">\(\bar{A}_{ij} = A_{ji}\)</span> or <span class="math inline">\(A = A^*\)</span>.</h3>
 <p>上面的定义实际上就是实对称的矩阵的复数版本。我们最终得到的结果是适用于hermitian matrix的，而不仅仅是实对称矩阵。</p>
 </div>
 <div id="eigenvalue-decomposition" class="section level3">
@@ -58,7 +58,7 @@
 </div>
 <div id="algebraic-multiplicity" class="section level3">
 <h3>代数重复度(Algebraic Multiplicity)</h3>
-<p>矩阵<span class="math inline">\(A\)</span>的特征多项式为： <span class="math display">\[p_A(z) = \text{det}(zI - A) \tag{2}\]</span> 根据代数基本定理可得： <span class="math display">\[ p_(A)(z) = (z - \lambda_1)(z - \lambda_2)\cdots(z - \lambda_n) \]</span> 其中<span class="math inline">\(\lambda_i \in \mathbb{C}\)</span>，而且<span class="math inline">\(\lambda_i\)</span>可以出现不止一次，它的代数重复度等于它出现的次数。</p>
+<p>矩阵<span class="math inline">\(A\)</span>的特征多项式为： <span class="math display">\[p_A(z) = \text{det}(zI - A) \tag{2}\]</span> 根据代数基本定理可得： <span class="math display">\[ p_(A)(z) = (z - \lambda_1)(z - \lambda_2)\cdots(z - \lambda_n) \tag{3}\]</span> 其中<span class="math inline">\(\lambda_i \in \mathbb{C}\)</span>，而且<span class="math inline">\(\lambda_i\)</span>可以出现不止一次，它的代数重复度等于它出现的次数。</p>
 </div>
 <div class="section level3">
 <h3>相似变换</h3>
@@ -79,6 +79,31 @@ X^{-1}AX(X^{-1}y) &amp;= X^{-1}Ay \qquad (Ay = \lambda y) \\
 &amp;= \lambda (X^{-1}y)
 \end{aligned}
 \]</span> 可知<span class="math inline">\(X^{-1}E_{\lambda}\)</span>是<span class="math inline">\(X^{-1}AX\)</span>的特征子空间，反之亦然。</p>
+</div>
+<div id="schur-factorization" class="section level3">
+<h3>Schur Factorization</h3>
+<p>矩阵<span class="math inline">\(A\)</span>的Schur分解为： <span class="math display">\[ A = QTQ^* \tag{4}\]</span> 其中<span class="math inline">\(Q\)</span>是酉矩阵，<span class="math inline">\(T\)</span>是上三角矩阵。<br />
+<strong>定理：</strong> <em>任何方阵</em><span class="math inline">\(A\)</span><em>都有Schur分解 。</em><br />
+<em>证明：</em>用数学归纳法来证。当<span class="math inline">\(n = 1\)</span>时，结果是平凡的。下面假设<span class="math inline">\(n \geq 2\)</span>，令<span class="math inline">\(x\)</span>是<span class="math inline">\(A\)</span>的特征向量，<span class="math inline">\(\lambda\)</span>是对应的特征值。令<span class="math inline">\(x\)</span>为一酉矩阵<span class="math inline">\(U\)</span>的第一列，则有： <span class="math display">\[
+U^*AU =
+\begin{bmatrix}
+\lambda &amp; B \\
+\vec{0} &amp; C \\
+\end{bmatrix}
+\]</span> 根据归纳假设<span class="math inline">\(C\)</span>有Schur分解<span class="math inline">\(VTV^*\)</span>，接下来构造矩阵： <span class="math display">\[
+Q = U
+\begin{bmatrix}
+1 &amp; \vec{0} \\
+\vec{0} &amp; V
+\end{bmatrix}
+\]</span> 可验证这是一个酉矩阵，则有： <span class="math display">\[
+Q^*AQ =
+\begin{bmatrix}
+\lambda &amp; BV \\
+\vec{0} &amp; T
+\end{bmatrix}
+\]</span></p>
+<p>假设矩阵<span class="math inline">\(A\)</span>是hermitian矩阵，根据上述定理有： <span class="math display">\[ A = QTQ^*\]</span> 两边取共轭转置得： <span class="math display">\[ A^* = QT^*Q^* \]</span> 而<span class="math inline">\(A = A^*\)</span>，故<span class="math inline">\(T = T^*\)</span>，故<span class="math inline">\(T\)</span>是对角实矩阵，而且<span class="math inline">\(A\)</span>和<span class="math inline">\(T\)</span>是相似矩阵，有相同的特征值，排列在<span class="math inline">\(T\)</span>的对角线上。从特征值分解的角度来看，<span class="math inline">\(Q\)</span>是特征向量矩阵，就是说hermitian矩阵的特征向量可以选为正交的单位向量。</p>
 </div>
 
 </main>
