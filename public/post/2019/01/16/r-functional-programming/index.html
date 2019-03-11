@@ -37,7 +37,33 @@
 
 
 
-<p>(需要填坑。。。)</p>
+<p>下面是一些常用的函数</p>
+<ul>
+<li><code>map()</code></li>
+<li><code>map2()</code></li>
+<li><code>pmap()</code></li>
+<li><code>invoke_map()</code></li>
+<li><code>safely()</code>: 使函数变得安全</li>
+<li><code>transpose()</code>: 使一个list的最内层变成最外层，这个函数可以使<code>result</code>，<code>error</code>，变成最外层列表，方便后面处理。<br />
+</li>
+<li><code>walk()</code>: operates just like <code>map()</code> except it’s designed for functions that don’t return anything. You use <code>walk()</code> for functions with side effects like printing, plotting or saving.</li>
+<li><code>walk2()</code>: just like <code>map2()</code></li>
+<li><code>pwalk()</code>: just like <code>pmap()</code></li>
+<li><code>flatten_char()</code>:</li>
+</ul>
+<pre class="r"><code>library(purrr)
+# Define list of functions
+funs &lt;- list(Normal = &quot;rnorm&quot;, Uniform = &quot;runif&quot;, Exp = &quot;rexp&quot;)
+
+# Define params
+params &lt;- list(
+  Normal = list(mean = 10),
+  Uniform = list(min = 0, max = 5),
+  Exp = list(rate = 5)
+)
+
+# Assign the simulated samples to sims
+sims &lt;- invoke_map(funs, params, n = 50)</code></pre>
 
 </main>
 

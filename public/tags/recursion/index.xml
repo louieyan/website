@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recursion on Lei Yan&#39;s Cool Website</title>
+    <link>/tags/recursion/</link>
+    <description>Recent content in Recursion on Lei Yan&#39;s Cool Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Partition trees</title>
+      <link>/post/2019/03/08/partition-trees/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/08/partition-trees/</guid>
+      <description>在学习CS61A的时候遇到了如下问题： 给定正整数n，用最大不超过m的部分来划分n，一共有多少种方法？ 举个例子令n = 2, m = 2，则一共有两种方法</description>
+    </item>
+    
+  </channel>
+</rss>

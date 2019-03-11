@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Middle School Mathematics on Lei Yan&#39;s Cool Website</title>
+    <link>/categories/middle-school-mathematics/</link>
+    <description>Recent content in Middle School Mathematics on Lei Yan&#39;s Cool Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/middle-school-mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Use Euler&#39;s Formula to Prove Trigonometric Identities</title>
+      <link>/post/2019/02/13/use-euler-s-formula-to-prove-trigonometric-identities/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/02/13/use-euler-s-formula-to-prove-trigonometric-identities/</guid>
+      <description>今天做PRML习题的时候看到的，用欧拉公式： \[ e^{ix} = \text{cos}(x) + i\text{sin}(x) \] 来证明下面三个等式： \[ \text{sin}^2(x) + \text{cos}^2(x) = 1 \tag{1} \] \[ \text{cos}(x - y) = \text{cos}(x)\text{cos}(y) + \text{sin}(x)\text{sin}(y) \tag{2} \] \[ \text{sin}(x - y) = \text{sin}(x)\text{cos}(y) - \text{cos}(x)\text{sin}(y) \tag{3} \] 证明非</description>
+    </item>
+    
+  </channel>
+</rss>

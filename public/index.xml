@@ -6,10 +6,28 @@
     <description>Recent content in Home on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Partition trees</title>
+      <link>/post/2019/03/08/partition-trees/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/08/partition-trees/</guid>
+      <description>在学习CS61A的时候遇到了如下问题： 给定正整数n，用最大不超过m的部分来划分n，一共有多少种方法？ 举个例子令n = 2, m = 2，则一共有两种方法</description>
+    </item>
+    
+    <item>
+      <title>Use Euler&#39;s Formula to Prove Trigonometric Identities</title>
+      <link>/post/2019/02/13/use-euler-s-formula-to-prove-trigonometric-identities/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/02/13/use-euler-s-formula-to-prove-trigonometric-identities/</guid>
+      <description>今天做PRML习题的时候看到的，用欧拉公式： \[ e^{ix} = \text{cos}(x) + i\text{sin}(x) \] 来证明下面三个等式： \[ \text{sin}^2(x) + \text{cos}^2(x) = 1 \tag{1} \] \[ \text{cos}(x - y) = \text{cos}(x)\text{cos}(y) + \text{sin}(x)\text{sin}(y) \tag{2} \] \[ \text{sin}(x - y) = \text{sin}(x)\text{cos}(y) - \text{cos}(x)\text{sin}(y) \tag{3} \] 证明非</description>
+    </item>
     
     <item>
       <title>Eigenvalues and Eigenvectors of Hermitian Matrix</title>
@@ -26,7 +44,7 @@
       <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/2019/01/16/r-functional-programming/</guid>
-      <description>(需要填坑。。。)</description>
+      <description>下面是一些常用的函数 map() map2() pmap() invoke_map() safely(): 使函数变得安全 transpose(): 使一个list的最内层变成最外层，这个函数可以使result，error，变成最外层列表，方便</description>
     </item>
     
     <item>
@@ -58,7 +76,7 @@
       <guid>/post/2019/01/02/machine-learning-resources/</guid>
       <description>I will continue adding new good resources to this post. But don’t get lost in them. Choose one and keep learning. After you finished one course, then choose another one.
 Hope this can be helpful to you!
-Roadmap of DL and MLFor a newecomer to deep learning and machine learning area, facing some much courses and resources, the first question is how to choose right books and courses to begin this trip.</description>
+Github ResourcesRoadmap of DL and MLFor a newecomer to deep learning and machine learning area, facing some much courses and resources, the first question is how to choose right books and courses to begin this trip.</description>
     </item>
     
     <item>

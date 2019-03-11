@@ -17,7 +17,7 @@
       <pubDate>Wed, 16 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>/post/2019/01/16/r-functional-programming/</guid>
-      <description>(需要填坑。。。)</description>
+      <description>下面是一些常用的函数 map() map2() pmap() invoke_map() safely(): 使函数变得安全 transpose(): 使一个list的最内层变成最外层，这个函数可以使result，error，变成最外层列表，方便</description>
     </item>
     
     <item>
