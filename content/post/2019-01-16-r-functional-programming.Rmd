@@ -8,4 +8,31 @@ categories:
 tags:
   - Functional Programming
 ---
-(需要填坑。。。)
+下面是一些常用的函数
+
+- `map()`
+- `map2()`
+- `pmap()`
+- `invoke_map()`
+- `safely()`: 使函数变得安全
+- `transpose()`: 使一个list的最内层变成最外层，这个函数可以使`result`，`error`，变成最外层列表，方便后面处理。    
+- `walk()`: operates just like `map()` except it's designed for functions that don't return anything. You use `walk()` for functions with side effects like printing, plotting or saving.
+- `walk2()`: just like `map2()`
+- `pwalk()`: just like `pmap()`
+- `flatten_char()`: 
+```{r}
+library(purrr)
+# Define list of functions
+funs <- list(Normal = "rnorm", Uniform = "runif", Exp = "rexp")
+
+# Define params
+params <- list(
+  Normal = list(mean = 10),
+  Uniform = list(min = 0, max = 5),
+  Exp = list(rate = 5)
+)
+
+# Assign the simulated samples to sims
+sims <- invoke_map(funs, params, n = 50)
+
+```

@@ -12,6 +12,8 @@ tags:
 I will continue adding new good resources to this post. But don't get lost in them. Choose one and keep learning. After you finished one course, then choose another one.  
 Hope this can be helpful to you!  
 
+# Github Resources
+
 ## [Roadmap of DL and ML](https://github.com/L1aoXingyu/Roadmap-of-DL-and-ML)  
 For a newecomer to deep learning and machine learning area, facing some much courses and resources, the first question is how to choose right books and courses to begin this trip.The roadmap includes some highly recommended courses, books and papers which can help you get into DL and ML area quickly. Maybe some materials are quite difficult, but really worth reading and studying.  
 
@@ -37,12 +39,24 @@ This project aims at teaching you the fundamentals of Machine Learning in python
 **You can download a pdf version of this book at [here](https://pan.baidu.com/s/1fb_jjSXZG9Ixe4hgmoDEug).**  
 
 ## [Code for PRML](https://github.com/PRML/PRMLT)  
-This Matlab package implements machine learning algorithms described in the great textbook: Pattern Recognition and Machine Learning by C. Bishop ([PRML](https://www.microsoft.com/en-us/research/people/cmbishop/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Fcmbishop%2Fprml%2F)).
+This Matlab package implements machine learning algorithms described in the great textbook: Pattern Recognition and Machine Learning by C. Bishop ([PRML](https://www.microsoft.com/en-us/research/people/cmbishop/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fum%2Fpeople%2Fcmbishop%2Fprml%2F)).  
 
+## [Cheatsheets AI](https://github.com/kailashahirwar/cheatsheets-ai)
+Essential Cheat Sheets for deep learning and machine learning researchers and practitioners.
 
+## [Paper with code](https://paperswithcode.com/)
+The mission of Papers With Code is to create a free and open resource with Machine Learning papers, code and evaluation tables.
 
+# Q&A of Some Concrete Topics
 
+## [Maximum Likelihood Estimators - Multivariate Gaussian](https://stats.stackexchange.com/questions/351549/maximum-likelihood-estimators-multivariate-gaussian/351550#351550?newreg=ca7f4cdfdd2948ca9589cbaece9409e7)  
+The full derivation of the Maximum Likelihood Estimators for the multivariate Gaussian.  
 
+## [Why Is The Cov of Multivariate Gaussian Positive Definite?](http://cs229.stanford.edu/section/gaussians.pdf)    
+Page 3 of a note of CS229.  
+
+## [Why We Use Negative (log) Likelihood Sometimes?](https://stats.stackexchange.com/questions/141087/i-am-wondering-why-we-use-negative-log-likelihood-sometimes)  
+This question puzzled me when I read page 96 of PRML. The original book uses likelihood, but in the errata, the author changed likelihood to negative likelihood to statisfy to condition of Robbins and Monro(1951). 
 
 
 
