@@ -31,7 +31,7 @@ $$
 $$
 \text{cos}(x - y) = \mathbf{Re}(e^{i(x-y)}) \quad \text{sin}(x - y) = \mathbf{Im}(e^{i(x-y)})
 $$
-可以证明等式$(3),(4)$
+可以证明等式$(2),(3)$
 
 
 
