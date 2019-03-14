@@ -47,6 +47,9 @@ Essential Cheat Sheets for deep learning and machine learning researchers and pr
 ## [Paper with code](https://paperswithcode.com/)
 The mission of Papers With Code is to create a free and open resource with Machine Learning papers, code and evaluation tables.
 
+## [Interpretable machine learning](https://christophm.github.io/interpretable-ml-book/)
+This book explains to you how to make (supervised) machine learning models interpretable.
+
 # Q&A of Some Concrete Topics
 
 ## [Maximum Likelihood Estimators - Multivariate Gaussian](https://stats.stackexchange.com/questions/351549/maximum-likelihood-estimators-multivariate-gaussian/351550#351550?newreg=ca7f4cdfdd2948ca9589cbaece9409e7)  
