@@ -6,10 +6,19 @@
     <description>Recent content in Home on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Projectors</title>
+      <link>/post/2019/03/18/projectors/</link>
+      <pubDate>Mon, 18 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/18/projectors/</guid>
+      <description>今天在做PRML习题3.2时，发现自己又把投影这部分的知识忘了，所以又看了一遍，总结在这里。 投影矩阵 定义：一个\(m \times m\)的矩阵\(P\)</description>
+    </item>
     
     <item>
       <title>Partition trees</title>

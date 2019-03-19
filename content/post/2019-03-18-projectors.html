@@ -1,0 +1,64 @@
+---
+title: Projectors
+author: Lei Yan
+date: '2019-03-18'
+slug: projectors
+categories:
+  - Linear Algebra
+tags:
+  - Projector
+---
+
+
+
+<p>今天在做PRML习题<code>3.2</code>时，发现自己又把投影这部分的知识忘了，所以又看了一遍，总结在这里。</p>
+<div class="section level3">
+<h3>投影矩阵</h3>
+<p><strong>定义：</strong>一个<span class="math inline">\(m \times m\)</span>的矩阵<span class="math inline">\(P\)</span>是投影矩阵，如果满足下式： <span class="math display">\[
+P^2 = P \tag{1}
+\]</span></p>
+接下来解释一下上面的定义。我们可以这么来理解投影，把一个向量<span class="math inline">\(v \in \mathbb{C}^m\)</span>沿着某特定方向的光投影到<span class="math inline">\(\mathbb{C}^m\)</span>的子空间<span class="math inline">\(range(P)\)</span>上，投影就是<span class="math inline">\(Pv\)</span>。为什么投影到的是<span class="math inline">\(range(P)\)</span>呢？很简单，因为对任意的矩阵<span class="math inline">\(A\)</span>和维度相符的向量<span class="math inline">\(x\)</span>，总有<span class="math inline">\(Ax \in range(A)\)</span>。现在思考一下特殊的情况，如果<span class="math inline">\(v \in range(P)\)</span>，则无论光从哪个方向来，其投影<span class="math inline">\(Pv\)</span>都会与<span class="math inline">\(v\)</span>重合，而且我们可以找到某个<span class="math inline">\(x\)</span>使<span class="math inline">\(v = Px\)</span>成立，则有： <span class="math display">\[
+Pv = P^2x = v = Px \tag{2}
+\]</span> 所以可以得到<span class="math inline">\((1)\)</span>中的定义。<br />
+还有一个问题，那就是该从哪个方向来光呢？
+<div align="center">
+<div class="figure">
+<img src="https://s2.ax1x.com/2019/03/18/AmvLrD.png" alt="图源：Numerical Linear Algbra" />
+<p class="caption">图源：Numerical Linear Algbra</p>
+</div>
+</div>
+<p>如上图所示，应该是<span class="math inline">\(Pv - v\)</span>。一个重要的结果是<span class="math inline">\(Pv - v \in null(P)\)</span>，推导如下： <span class="math display">\[
+P(Pv - v) = P^2v - Pv = 0 \tag{3}
+\]</span> 第二个等号用到了定义<span class="math inline">\((1)\)</span>。</p>
+</div>
+<div id="complementary-projectors" class="section level3">
+<h3>接下来介绍<strong>Complementary projectors(互补投影矩阵)</strong></h3>
+<p>如果<span class="math inline">\(P\)</span>是一个投影矩阵，则<span class="math inline">\(I - P\)</span>也是投影矩阵， <span class="math display">\[
+(I - P)^2 = I - 2P + P^2 = I - P \tag{4}
+\]</span> 这个投影矩阵就是<span class="math inline">\(P\)</span>的互补投影矩阵。它们之间有如下联系： <span class="math display">\[
+range(I - P) = null(P) \tag{5}
+\]</span> 上式可以非常简单的证明出来，这里就不写了。<br />
+若用<span class="math inline">\(I - P\)</span>代替上式中的<span class="math inline">\(P\)</span>，则有： <span class="math display">\[
+null(I - P) = range(P) \tag{6}
+\]</span> 进一步的，可以证明下式成立： <span class="math display">\[
+null(I - P) \cap null(P) = \{0\} \tag{7}
+\]</span> 再根据<span class="math inline">\((6)\)</span>可得： <span class="math display">\[
+range(P) \cap null(P) = \{0\} \tag{8}
+\]</span> 上面的结论表明投影矩阵把<span class="math inline">\(\mathbb{C}^m\)</span>分为两个空间。<br />
+反过来，如果有两个空间<span class="math inline">\(S_1, S_2\)</span>，满足条件<span class="math inline">\(S_1 \cap S_2 = \{0\}\)</span>和<span class="math inline">\(S_1 + S_2 = \mathbb{C}^m\)</span>则就有一个投影矩阵<span class="math inline">\(P\)</span>，使得<span class="math inline">\(range(P) = S_1, \quad null(P) = S_2\)</span>。我们就说这个矩阵是沿着<span class="math inline">\(S_2\)</span>投影到<span class="math inline">\(S_1\)</span>上的。</p>
+</div>
+<div class="section level3">
+<h3>正交投影</h3>
+<p>关于正交投影有如下结论：<br />
+<em>一个投影矩阵</em><span class="math inline">\(P\)</span><strong>当且仅当</strong><span class="math inline">\(P = P^*\)</span><em>时是正交投影矩阵</em>。<br />
+别的内容我还没有看完。。。后面再写吧！</p>
+</div>
+<div class="section level3">
+<h3>构造正交投影矩阵</h3>
+<p>假设有一组线性无关的向量<span class="math inline">\(\{a_1, a_2, \cdots, a_n\}\)</span>，并令<span class="math inline">\(A\)</span>是<span class="math inline">\(m \times n\)</span>的矩阵，<span class="math inline">\(A\)</span>的列就由这组向量构成。<br />
+接下来构造投影到<span class="math inline">\(range(A)\)</span>的正交投影矩阵，<span class="math inline">\(\forall v \in \mathbb{C}^m\)</span>，记它的正交投影为<span class="math inline">\(y \in range(A)\)</span>，则有<span class="math inline">\((y - v) \perp range(A)\)</span>，这等价于<span class="math inline">\(\forall j, a_j^*(y - v) = 0\)</span>，既然<span class="math inline">\(y \in range(A)\)</span>，则可以找到<span class="math inline">\(x\)</span>，使得<span class="math inline">\(y = Ax\)</span>，则有<span class="math inline">\(\forall j, a_j^*(Ax - v) = 0\)</span>，或者<span class="math inline">\(A^*(Ax - v) = 0\)</span>，则解出<span class="math inline">\(x = (A^*A)^{-1}Av\)</span>，又有<span class="math inline">\(Ax = y\)</span>，则有： <span class="math display">\[
+y = A(A^*A)^{-1}Av \tag{9}
+\]</span> 我们就得到了正交投影矩阵: <span class="math display">\[
+P = A(A^*A)^{-1}A \tag{10}
+\]</span> 由上面的式子可以得到线性回归里的normal equation。</p>
+</div>

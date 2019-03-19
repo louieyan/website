@@ -1,0 +1,95 @@
+---
+title: Projectors
+author: Lei Yan
+date: '2019-03-18'
+slug: projectors
+categories:
+  - Linear Algebra
+tags:
+  - Projector
+---
+今天在做PRML习题`3.2`时，发现自己又把投影这部分的知识忘了，所以又看了一遍，总结在这里。  
+
+### 投影矩阵
+**定义：**一个$m \times m$的矩阵$P$是投影矩阵，如果满足下式：
+$$
+P^2 = P \tag{1}
+$$
+
+接下来解释一下上面的定义。我们可以这么来理解投影，把一个向量$v \in \mathbb{C}^m$沿着某特定方向的光投影到$\mathbb{C}^m$的子空间$range(P)$上，投影就是$Pv$。为什么投影到的是$range(P)$呢？很简单，因为对任意的矩阵$A$和维度相符的向量$x$，总有$Ax \in range(A)$。现在思考一下特殊的情况，如果$v \in range(P)$，则无论光从哪个方向来，其投影$Pv$都会与$v$重合，而且我们可以找到某个$x$使$v = Px$成立，则有：
+$$
+Pv = P^2x = v = Px \tag{2}
+$$
+所以可以得到$(1)$中的定义。   
+还有一个问题，那就是该从哪个方向来光呢？
+<div align=center>
+![图源：Numerical Linear Algbra](https://s2.ax1x.com/2019/03/18/AmvLrD.png)
+</div>
+如上图所示，应该是$Pv - v$。一个重要的结果是$Pv - v \in null(P)$，推导如下：
+$$
+P(Pv - v) = P^2v - Pv = 0 \tag{3}
+$$
+第二个等号用到了定义$(1)$。
+
+### 接下来介绍**Complementary projectors(互补投影矩阵)**  
+
+如果$P$是一个投影矩阵，则$I - P$也是投影矩阵，
+$$
+(I - P)^2 = I - 2P + P^2 = I - P \tag{4}
+$$
+这个投影矩阵就是$P$的互补投影矩阵。它们之间有如下联系：
+$$
+range(I - P) = null(P) \tag{5}
+$$
+上式可以非常简单的证明出来，这里就不写了。    
+若用$I - P$代替上式中的$P$，则有：
+$$
+null(I - P) = range(P) \tag{6}
+$$
+进一步的，可以证明下式成立：
+$$
+null(I - P) \cap null(P) = \{0\} \tag{7}
+$$
+再根据$(6)$可得：
+$$
+range(P) \cap null(P) = \{0\} \tag{8}
+$$
+上面的结论表明投影矩阵把$\mathbb{C}^m$分为两个空间。  
+反过来，如果有两个空间$S_1, S_2$，满足条件$S_1 \cap S_2 = \{0\}$和$S_1 + S_2 =  \mathbb{C}^m$则就有一个投影矩阵$P$，使得$range(P) = S_1, \quad null(P) = S_2$。我们就说这个矩阵是沿着$S_2$投影到$S_1$上的。  
+
+### 正交投影
+关于正交投影有如下结论：   
+*一个投影矩阵*$P$**当且仅当**$P = P^*$*时是正交投影矩阵*。   
+别的内容我还没有看完。。。后面再写吧！     
+
+### 构造正交投影矩阵
+假设有一组线性无关的向量$\{a_1, a_2, \cdots, a_n\}$，并令$A$是$m \times n$的矩阵，$A$的列就由这组向量构成。   
+接下来构造投影到$range(A)$的正交投影矩阵，$\forall v \in \mathbb{C}^m$，记它的正交投影为$y \in range(A)$，则有$(y - v) \perp range(A)$，这等价于$\forall j, a_j^*(y - v) = 0$，既然$y \in range(A)$，则可以找到$x$，使得$y = Ax$，则有$\forall j, a_j^*(Ax - v) = 0$，或者$A^*(Ax - v) = 0$，则解出$x = (A^*A)^{-1}Av$，又有$Ax = y$，则有：
+$$
+y = A(A^*A)^{-1}Av \tag{9}
+$$
+我们就得到了正交投影矩阵:
+$$
+P = A(A^*A)^{-1}A \tag{10}
+$$
+由上面的式子可以得到线性回归里的normal equation。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
