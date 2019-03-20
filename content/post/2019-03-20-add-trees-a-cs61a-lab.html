@@ -1,0 +1,120 @@
+---
+title: Add Trees(A CS61A Lab Problem)
+author: Lei Yan
+date: '2019-03-20'
+slug: add-trees-a-cs61a-lab
+categories:
+  - Python
+tags:
+  - Recursion
+  - Python
+---
+
+
+
+<div id="if-you-want-to-learn-this-course-please-click-here." class="section level3">
+<h3>If you want to learn this course, please click <a href="https://inst.eecs.berkeley.edu/~cs61a/sp18/">here</a>.</h3>
+</div>
+<div id="this-problem-is-lab05-q9-of-the-above-course." class="section level3">
+<h3>This problem is <a href="https://inst.eecs.berkeley.edu/~cs61a/sp18/lab/lab05/#q9">lab05 Q9</a> of the above course.</h3>
+<p>Here is the problem description:</p>
+<blockquote>
+<p>Define the function <code>add_trees</code>, which takes in two trees and returns a new tree where each corresponding node from the first tree is added with the node from the second tree. If a node at any particular position is present in one tree but not the other, it should be present in the new tree as well.</p>
+</blockquote>
+<p>First, here is my solution:</p>
+<pre class="python"><code>def add_trees(t1, t2):
+    #if is_leaf(t1) and is_leaf(t2):
+        #return tree(label(t1) + label(t2))
+    #elif is_leaf(t1) and not is_leaf(t2):
+        #return tree(label(t1) + label(t2), branches(t2))
+    #elif is_leaf(t2) and not is_leaf(t1):
+        #return tree(t2, t1)
+    len_1, len_2 = len(branches(t1)), len(branches(t2))
+    if len_1 == len_2:
+        return tree(label(t1) + label(t2), [add_trees(b1, b2) for b1, b2 in zip(branches(t1), branches(t2))])
+    elif len_1 &lt; len_2:
+        branches_t1 = branches(t1) + [tree(0) for _ in range(len_2 - len_1)]
+        new_t1 = tree(label(t1), branches_t1)
+        return add_trees(new_t1, t2)
+    else:
+        return add_trees(t2, t1)</code></pre>
+<p>For clarity, I delted the doctest.<br />
+What you see is the second version of my solution. The first version has three more <code>if/else</code> as you can see in the comments. Let’s analyse this piece of code!</p>
+<p>Please consider these four situations:</p>
+<ol style="list-style-type: decimal">
+<li>If both t1 and t2 are leaves.</li>
+<li>If one of the two trees is leaf but not the another.</li>
+<li>Both trees are not leaves, but have the <strong>same</strong> number of branches.</li>
+<li>Both trees are not leaves, but have <strong>different</strong> numbers of branches.</li>
+</ol>
+<p>Both situation 1 and 2 can be easily solved, see the comments of my code.<br />
+Situation 3 is actually not hard too, because you have the <strong>same</strong> number of branches, so <code>zip(branches(t1), branches(t2))</code> works well. And hence you can add the roots of two trees and invoke recursive call on each pair of branches of the two trees.</p>
+<div id="the-real-challenge-is-situation-4" class="section level4">
+<h4>The real challenge is situation 4</h4>
+<p>At first, I don’t know how to tackle this problem, so I went to lunch. I have been thinking about this problem on my way to the cafeteria. When I came back, a flash of inspiration provided the major breakthrough: <strong>If the numbers of branches are different, I can just add number 0 to that smaller tree to make these two trees have the same number of branches!</strong></p>
+<p>OK, problem solved! But wait, situation 1(2) seems to be a special case of situation 3(4)! So, after I deleted the code of situation 1 and 2, I got the present version.</p>
+<p>Code below is a definition of tree ADT.</p>
+<pre class="python"><code>def tree(label, branches=[]):
+    &quot;&quot;&quot;Construct a tree with the given label value and a list of branches.&quot;&quot;&quot;
+    for branch in branches:
+        assert is_tree(branch), &#39;branches must be trees&#39;
+    return [label] + list(branches)
+
+def label(tree):
+    &quot;&quot;&quot;Return the label value of a tree.&quot;&quot;&quot;
+    return tree[0]
+
+def branches(tree):
+    &quot;&quot;&quot;Return the list of branches of the given tree.&quot;&quot;&quot;
+    return tree[1:]
+
+def is_tree(tree):
+    &quot;&quot;&quot;Returns True if the given tree is a tree, and False otherwise.&quot;&quot;&quot;
+    if type(tree) != list or len(tree) &lt; 1:
+        return False
+    for branch in branches(tree):
+        if not is_tree(branch):
+            return False
+    return True
+
+def is_leaf(tree):
+    &quot;&quot;&quot;Returns True if the given tree&#39;s list of branches is empty, and False
+    otherwise.
+    &quot;&quot;&quot;
+    return not branches(tree)
+
+def print_tree(t, indent=0):
+    &quot;&quot;&quot;Print a representation of this tree in which each node is
+    indented by two spaces times its depth from the root.
+
+    &gt;&gt;&gt; print_tree(tree(1))
+    1
+    &gt;&gt;&gt; print_tree(tree(1, [tree(2)]))
+    1
+      2
+    &gt;&gt;&gt; numbers = tree(1, [tree(2), tree(3, [tree(4), tree(5)]), tree(6, [tree(7)])])
+    &gt;&gt;&gt; print_tree(numbers)
+    1
+      2
+      3
+        4
+        5
+      6
+        7
+    &quot;&quot;&quot;
+    print(&#39;  &#39; * indent + str(label(t)))
+    for b in branches(t):
+        print_tree(b, indent + 1)
+
+def copy_tree(t):
+    &quot;&quot;&quot;Returns a copy of t. Only for testing purposes.
+
+    &gt;&gt;&gt; t = tree(5)
+    &gt;&gt;&gt; copy = copy_tree(t)
+    &gt;&gt;&gt; t = tree(6)
+    &gt;&gt;&gt; print_tree(copy)
+    5
+    &quot;&quot;&quot;
+    return tree(label(t), [copy_tree(b) for b in branches(t)])</code></pre>
+</div>
+</div>

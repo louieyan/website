@@ -6,10 +6,20 @@
     <description>Recent content in Recursion on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/recursion/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Add Trees(A CS61A Lab Problem)</title>
+      <link>/post/2019/03/20/add-trees-a-cs61a-lab/</link>
+      <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/03/20/add-trees-a-cs61a-lab/</guid>
+      <description>If you want to learn this course, please click here.This problem is lab05 Q9 of the above course.Here is the problem description:
+Define the function add_trees, which takes in two trees and returns a new tree where each corresponding node from the first tree is added with the node from the second tree. If a node at any particular position is present in one tree but not the other, it should be present in the new tree as well.</description>
+    </item>
     
     <item>
       <title>Partition trees</title>
