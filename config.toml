@@ -35,4 +35,4 @@ hasCJKLanguage = true
 
 [params]
     description = "A website built through Hugo and blogdown."
-    footer = "&copy; Lei Yan 2018 -- 2019 | [Github](https://github.com/louieyan) | [Zhihu](https://www.zhihu.com/people/yan-lei-8-9/) | [QQ](http://wpa.qq.com/msgrd?v=3&uin=1216360090&site=qq&menu=yes)"
+    footer = "&copy; Lei Yan 2018 -- 2019 | [Github](https://github.com/louieyan) | [Zhihu](https://www.zhihu.com/people/yan-lei-8-9/) | Email: yanlei.cis@gmail.com"
