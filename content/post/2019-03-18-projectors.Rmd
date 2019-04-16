@@ -64,13 +64,13 @@ $$
 
 ### 构造正交投影矩阵
 假设有一组线性无关的向量$\{a_1, a_2, \cdots, a_n\}$，并令$A$是$m \times n$的矩阵，$A$的列就由这组向量构成。   
-接下来构造投影到$range(A)$的正交投影矩阵，$\forall v \in \mathbb{C}^m$，记它的正交投影为$y \in range(A)$，则有$(y - v) \perp range(A)$，这等价于$\forall j, a_j^*(y - v) = 0$，既然$y \in range(A)$，则可以找到$x$，使得$y = Ax$，则有$\forall j, a_j^*(Ax - v) = 0$，或者$A^*(Ax - v) = 0$，则解出$x = (A^*A)^{-1}Av$，又有$Ax = y$，则有：
+接下来构造投影到$range(A)$的正交投影矩阵，$\forall v \in \mathbb{C}^m$，记它的正交投影为$y \in range(A)$，则有$(y - v) \perp range(A)$，这等价于$\forall j, a_j^*(y - v) = 0$，既然$y \in range(A)$，则可以找到$x$，使得$y = Ax$，则有$\forall j, a_j^*(Ax - v) = 0$，或者$A^*(Ax - v) = 0$，则解出$x = (A^*A)^{-1}A^*v$，又有$Ax = y$，则有：
 $$
-y = A(A^*A)^{-1}Av \tag{9}
+y = A(A^*A)^{-1}A^*v \tag{9}
 $$
 我们就得到了正交投影矩阵:
 $$
-P = A(A^*A)^{-1}A \tag{10}
+P = A(A^*A)^{-1}A^* \tag{10}
 $$
 由上面的式子可以得到线性回归里的normal equation。
 
