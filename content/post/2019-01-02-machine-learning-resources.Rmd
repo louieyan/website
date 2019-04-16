@@ -64,6 +64,11 @@ This question puzzled me when I read page 96 of PRML. The original book uses lik
 ## [Completing The Square](https://learnbayes.org/index.php?option=com_content&view=article&id=77:completesquare&catid=83&Itemid=479&showall=1&limitstart=)  
 In this reference tutorial, we will demonstrate how to complete the square in both univariate (scalar) and multivariate (matrix) contexts. You can also find relevant discussion in section 2.3.1 of PRML.
 
+## [Normal distance from the origin to the dession surface](https://math.stackexchange.com/questions/1029153/deriving-the-normal-distance-from-the-origin-to-the-decision-surface)  
+
+Derivation of PRML eq(4.5).  
+
+
 
 
 
