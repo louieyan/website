@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Derivation of PRML (4.68) | Lei Yan&#39;s Cool Website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+     
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Derivation of PRML (4.68)</span></h1>
+<h2 class="author">Lei Yan</h2>
+<h2 class="date">2019/04/25</h2>
+</div>
+
+<main>
+
+
+
+<p>From <span class="math inline">\((4.62)\)</span> we know that
+<span class="math display">\[
+\begin{aligned}
+p(\mathcal{C}_k|x) 
+&amp;= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\
+&amp;= \frac{exp(a_k)}{\sum_j exp(a_j)}
+\end{aligned}\tag{1}
+\]</span>
+Now, we should focus on the right hand of first equal sign.<br />
+Using the assumption that <span class="math inline">\(p(x|\mathcal{C}_k)\)</span> is a normal distribution and all classes share the same covariance matrix, we have
+<span class="math display">\[
+\begin{aligned}
+p(\mathcal{C}_k|x) 
+&amp;= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\
+&amp;= \frac{(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_j(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
+&amp;= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
+&amp;= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k))\}}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j+ ln(p(\mathcal{C}_j))\} \\
+&amp;= \frac{exp(a_k)}{\sum_j exp(a_j)}
+\end{aligned}
+\]</span>
+So, we have
+<span class="math display">\[
+a_k(x) = x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k)
+\]</span></p>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; Lei Yan 2018 &ndash; 2019 | <a href="https://github.com/louieyan">Github</a> | <a href="https://www.zhihu.com/people/yan-lei-8-9/">Zhihu</a> | Email: yanlei.cis@gmail.com
+  
+  </footer>
+  </body>
+</html>
+

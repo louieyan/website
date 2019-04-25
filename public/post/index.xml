@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Lei Yan&#39;s Cool Website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Derivation of PRML (4.68)</title>
+      <link>/post/2019/04/25/derivation-of-prml-4-68/</link>
+      <pubDate>Thu, 25 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/04/25/derivation-of-prml-4-68/</guid>
+      <description>From \((4.62)\) we know that\[\begin{aligned}p(\mathcal{C}_k|x) &amp;amp;= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\&amp;amp;= \frac{exp(a_k)}{\sum_j exp(a_j)}\end{aligned}\tag{1}\]Now, we should focus on the right hand of first equal sign.
+Using the assumption that \(p(x|\mathcal{C}_k)\) is a normal distribution and all classes share the same covariance matrix, we have\[\begin{aligned}p(\mathcal{C}_k|x) &amp;amp;= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\&amp;amp;= \frac{(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_j(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\&amp;amp;= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\&amp;amp;= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k))\}}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j+ ln(p(\mathcal{C}_j))\} \\&amp;amp;= \frac{exp(a_k)}{\sum_j exp(a_j)}\end{aligned}\]So, we have\[a_k(x) = x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k)\]</description>
+    </item>
     
     <item>
       <title>保研经历分享</title>
