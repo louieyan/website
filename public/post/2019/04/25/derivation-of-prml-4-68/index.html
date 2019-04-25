@@ -47,20 +47,20 @@ p(\mathcal{C}_k|x)
 \]</span>
 Now, we should focus on the right hand of first equal sign.<br />
 Using the assumption that <span class="math inline">\(p(x|\mathcal{C}_k)\)</span> is a normal distribution and all classes share the same covariance matrix, we have
-<span class="math display">\[
+$$
 \begin{aligned}
-p(\mathcal{C}_k|x) 
-&amp;= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\
-&amp;= \frac{(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_j(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
-&amp;= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
-&amp;= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k))\}}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j+ ln(p(\mathcal{C}_j))\} \\
-&amp;= \frac{exp(a_k)}{\sum_j exp(a_j)}
+p(_k|x)
+=&amp;  \
+=&amp;  \
+=&amp;  \</p>
+<p>=&amp; \</p>
+<p>=&amp; 
 \end{aligned}
-\]</span>
-So, we have
 <span class="math display">\[
-a_k(x) = x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k)
-\]</span></p>
+So, we have
+\]</span>
+a_k(x) = x<sup>T</sup>{-1}_k-_k<sup>T</sup>{-1}_k + ln(p(_k)
+$$</p>
 
 </main>
 

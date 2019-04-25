@@ -21,11 +21,13 @@ Using the assumption that $p(x|\mathcal{C}_k)$ is a normal distribution and all 
 $$
 \begin{aligned}
 p(\mathcal{C}_k|x) 
-&= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\
-&= \frac{(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_j(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
-&= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
-&= \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k))\}}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j+ ln(p(\mathcal{C}_j))\} \\
-&= \frac{exp(a_k)}{\sum_j exp(a_j)}
+=& \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\
+=& \frac{(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_j(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
+=& \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\
+
+=&\frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k + ln(p(\mathcal{C}_k))\}}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j+ ln(p(\mathcal{C}_j))\}} \\
+
+=& \frac{exp(a_k)}{\sum_j exp(a_j)}
 \end{aligned}
 $$
 So, we have
