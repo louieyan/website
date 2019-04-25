@@ -18,9 +18,8 @@
       
       <guid>/post/2019/04/25/derivation-of-prml-4-68/</guid>
       <description>From \((4.62)\) we know that\[\begin{aligned}p(\mathcal{C}_k|x) &amp;amp;= \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\&amp;amp;= \frac{exp(a_k)}{\sum_j exp(a_j)}\end{aligned}\tag{1}\]Now, we should focus on the right hand of first equal sign.
-Using the assumption that \(p(x|\mathcal{C}_k)\) is a normal distribution and all classes share the same covariance matrix, we have$$\begin{aligned}p(_k|x)=&amp;amp; \=&amp;amp; \=&amp;amp; \
-=&amp;amp; \
-=&amp;amp; \end{aligned}\[So, we have\]a_k(x) = xT{-1}_k-_kT{-1}_k + ln(p(_k)$$</description>
+Using the assumption that \(p(x|\mathcal{C}_k)\) is a normal distribution and all classes share the same covariance matrix, we have:
+\[\begin{aligned}p(\mathcal{C}_k|x) =&amp;amp; \frac{p(x|\mathcal{C}_k)p(\mathcal{C}_k)}{\sum_j p(x|\mathcal{C}_j)p(\mathcal{C}_j)} \\=&amp;amp; \frac{(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_j(2\pi^{-D/2})|\Sigma|^{-1/2}exp\{\frac{1}{2}x^T\Sigma^{-1} x\}exp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \\=&amp;amp; \frac{exp\{x^T\Sigma^{-1}\mu_k-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_k\}p(\mathcal{C}_k)}{\sum_jexp\{x^T\Sigma^{-1}\mu_j-\frac{1}{2}\mu_k^T\Sigma^{-1}\mu_j\}p(\mathcal{C}_j)} \end{aligned}\]Next, we can put \(p(\mathcal{C}_k)\) into \(exp\):</description>
     </item>
     
   </channel>
