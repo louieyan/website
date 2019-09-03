@@ -38,6 +38,15 @@
     </item>
     
     <item>
+      <title>Pandoc</title>
+      <link>/categories/pandoc/</link>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/pandoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>/categories/python/</link>
       <pubDate>Wed, 20 Mar 2019 00:00:00 +0000</pubDate>
@@ -67,7 +76,7 @@
     <item>
       <title>Summary</title>
       <link>/categories/summary/</link>
-      <pubDate>Thu, 11 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 08 May 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/summary/</guid>
       <description></description>

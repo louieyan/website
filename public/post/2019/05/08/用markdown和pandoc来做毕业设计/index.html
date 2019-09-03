@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用Markdown和Pandoc来做毕业设计 | Lei Yan&#39;s Cool Website</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+     
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">用Markdown和Pandoc来做毕业设计</span></h1>
+<h2 class="author">Lei Yan</h2>
+<h2 class="date">2019/05/08</h2>
+</div>
+
+<main>
+
+
+
+<div id="section" class="section level3">
+<h3>写在正式内容之前</h3>
+<p>前几天把毕设查重了，算是正式搞完了吧。把我写作用的工具分享一下，希望能够帮助到别人。</p>
+<p>如果你<span class="math inline">\(\LaTeX\)</span>玩的非常溜，能够按照学校的要求调整论文格式，或者有毕业设计的模板，那就不用看了。。。事实上，我就是因为玩的不够好，格式不会调，又不想学这种东西。另一方面又觉得Word公式太麻烦，引用也麻烦，但是排版是贼简单。于是才转战Markdown + Pandoc的。</p>
+<p>用Markdown + Pandoc写作的流程就是，你先用markdown把论文写完，然后用Pandoc转成Word文档，然后调格式就行了。下面详细讲一下。</p>
+</div>
+<div id="markdown" class="section level3">
+<h3>Markdown</h3>
+<p><a href="https://blog.huihut.com/2017/01/25/MarkdownTutorial/">Markdown</a>是一个轻量级的标记语言，它有着轻量化、易读易写特性，并且对于图片，图表、数学式都有支持。因此完全可以满足写作论文初稿的要求，而且这些语法十几分钟就学会了，搜一下一堆教程。<br />
+下面就是一个小例子：</p>
+<pre class="markdown"><code># 第一章
+## 1.1
+balabalabalabala.....
+这里是一个公式：
+$$ 
+\begin{aligned}
+\int_{-\infty}^{\infty}\hat{f}(x) dx &amp;= \int_{-\infty}^{\infty} \frac{1}{nh} \sum_{i=1}^{n} K(\frac{x - X_i}{h})dx \\
+&amp;= \sum_{i=1}^{n} \frac{1}{n} \underbrace{\int_{-\infty}^{\infty}K(\frac{x - X_i}{h})d\frac{x}{h}}_\text{等于 1} \\
+&amp;= \sum_{i=1}^{n} \frac{1}{n} \\
+&amp;= 1
+\end{aligned}
+$$
+![这里是一个图片](https://s2.ax1x.com/2019/05/08/E6W2Ix.jpg)
+## 1.2
+然后我们还可以引用参考文献，比如经典的破产论是由瑞典精算师Lundberg于1903年首次提出[@lundberg1903]。   
+然后参考文献放到.bib文件里，比如这里就是demo.bib吧！
+</code></pre>
+<p>可以看到，在上面这个例子几乎包含了论文初稿所需要的全部东西，标题，公式，图片，引用文献。接下来看看我们如何利用Pandoc把Markdown文件转化为Word文件！<br />
+另外需要强调一下，如果你是用<code>\tag{}</code>给公式标号的，转换的时候会出错，所以建议就别标号了。。。</p>
+</div>
+<div id="pandoc" class="section level3">
+<h3>Pandoc</h3>
+<p><a href="https://pandoc.org/">Pandoc</a>堪称文档转换届的瑞士军刀，可以把Markdown文件转为各种格式。它很强大，但是我们需要的命令基本上就两个。<br />
+第一个是：</p>
+<pre class="markdown"><code>pandoc demo.md -o demo.docx</code></pre>
+<p>这个适用于没有引用参考文献的md文件，如果有的话，就需要下面的命令：</p>
+<pre class="markdown"><code>pandoc --filter pandoc-citeproc --bibliography=demo.bib --csl=chinese-gb7714-2005-numeric.csl demo.md -o demo.docx</code></pre>
+上面的命令中<code>chinese-gb7714-2005-numeric.csl</code>是参考文献的格式，这个是不少学校要求的格式，可以在<a href="https://github.com/citation-style-language/styles/blob/master/chinese-gb7714-2005-numeric.csl">这里</a>下载。
+下面我们看一看上面那个例子转化后的样子：
+<center>
+<a href="https://imgchr.com/i/E6fMwR"><img src="https://s2.ax1x.com/2019/05/08/E6fMwR.md.png" alt="E6fMwR.md.png" /></a>
+</center>
+</div>
+<div id="aurora" class="section level3">
+<h3>Aurora</h3>
+<p><a href="https://pan.baidu.com/s/128sI2j8eH_aslUrXJ9jMOg">点击下载</a> 提取码: e6gi</p>
+<p>Aurora 是一个可以Word插件，通过它可以在Word中插入<span class="math inline">\(\LaTeX\)</span>，我<a href="https://github.com/louieyan/thesis">论文</a>中的算法都是使用这种方法写的。</p>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  &copy; Lei Yan 2018 &ndash; 2019 | <a href="https://github.com/louieyan">Github</a> | <a href="https://www.zhihu.com/people/yan-lei-8-9/">Zhihu</a> | Email: yanlei.cis@gmail.com
+  
+  </footer>
+  </body>
+</html>
+
